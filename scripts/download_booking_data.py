@@ -14,7 +14,11 @@ def download_booking_data():
     Download hotel booking dataset and save raw copy.
     """
 
+    print("Downloading dataset...")
+
     df = pd.read_csv(BOOKING_DATA_URL)
+
+    print(f"Dataset shape: {df.shape}")
 
     df.to_csv(OUTPUT_PATH, index=False)
 
